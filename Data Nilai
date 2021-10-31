@@ -1,0 +1,26 @@
+#variable yang berulang menggunakan list/matriks
+
+list_nama = []
+list_nim = []
+list_uts = []
+list_uas = []
+list_total = []
+
+ulang = 2
+for i in range (ulang):
+    print ("data ke -" + str(i+1))
+    list_nama.append(input("Masukkan Nama anda : "))
+    list_nim.append(input("Masukkan NIM anda : "))
+    list_uts.append(int(input("Masukkan Nilai UTS anda : ")))
+    list_uas.append(int(input("Masukkan Nilai UAS anda : ")))
+
+#proses
+for i in range(ulang):
+    list_total.append((list_uts[i] + list_uas[i]) / 2)
+#cetak
+print("=================================================================")
+print("Nama        NIM    Nilai UTS    Nilai UAS       Total")
+print("=================================================================")
+for i in range (ulang):
+    print(" %s \t %s \t\t %i \t\t %i \t\t\t %i" % (list_nama[i], list_nim[i], list_uts[i], list_uas[i], list_total[i]))
+print("=================================================================")
